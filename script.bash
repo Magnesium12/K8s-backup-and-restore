@@ -18,9 +18,9 @@ commands=(
   "velero install \
    --provider aws \
    --plugins velero/velero-plugin-for-aws:v1.6.0 \
-   --bucket k8s-cluster-backups-velero-hrishit \
+   --bucket <BUCKET_NAME> \
    --secret-file ./credentials-velero \
-   --backup-location-config region=eu-north-1 \
+   --backup-location-config region=<REGION> \
    --use-volume-snapshots=false"
   "kubectl create ns nginx-demo"
   "kubectl create deployment nginx --image=nginx -n nginx-demo"
