@@ -97,5 +97,6 @@ Restore file can also be seen on AWS S3 bucket.
 ```bash
 velero schedule create nginx-backup-schedule \
   --schedule "0 */6 * * *" \
-  --include-namespaces nginx-demo
+  --include-namespaces nginx-demo \
+  --ttl 72h0m0s
 ```
