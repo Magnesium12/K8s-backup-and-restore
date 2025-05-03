@@ -92,3 +92,10 @@ velero restore create --from-backup nginx-backup
 kubectl get all -n nginx-demo   #Should contain the deployment
 ```
 Restore file can also be seen on AWS S3 bucket.
+
+## Scheduling backups
+```bash
+velero schedule create nginx-backup-schedule \
+  --schedule "0 */6 * * *" \
+  --include-namespaces nginx-demo
+```
